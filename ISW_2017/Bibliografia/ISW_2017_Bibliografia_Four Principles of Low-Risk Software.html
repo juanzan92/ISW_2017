@@ -1,0 +1,393 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" xsl="http://www.w3.org/1999/XSL/Transform xmlns:fb="http://www.facebook.com/2008/fbml""><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" xsl="http://www.w3.org/1999/XSL/Transform xmlns:fb="http://www.facebook.com/2008/fbml""> <![endif]--><!--[if IE 8]><html class="no-js lt-ie9" xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fb="http://www.facebook.com/2008/fbml"><![endif]--><!--[if gt IE 8]><!--><html class="no-js" xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:scr="urn:scr.this"><!--<![endif]--><head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="verify-v1" content="jKqgZt8qtZUt+IrazV2fydKUZG2KKR8QEUoYjH9tth4=" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Four Principles of Low-Risk Software Releases | Principle 1: Low-Risk Releases Are Incremental | InformIT</title><link href="/display/InformIT/css/style-blessed1.css" rel="stylesheet" type="text/css" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link href="/display/InformIT/css/style.css" rel="stylesheet" type="text/css" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link href="/display/common/css/print.css" rel="stylesheet" media="print" type="text/css" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/display/InformIT/images/objects/touch_icons/apple-touch-icon-144x144-precomposed.png" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/display/InformIT/images/objects/touch_icons/apple-touch-icon-114x114-precomposed.png" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/display/InformIT/images/objects/touch_icons/apple-touch-icon-72x72-precomposed.png" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link rel="apple-touch-icon-precomposed" href="/display/InformIT/images/objects/touch_icons/apple-touch-icon-precomposed.png" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><script language="JavaScript" src="/display/common/javascript/AdobeAnalyticsScript.js" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script src="//assets.adobedtm.com/cb849396793dda3fc498b86555fddd5a2d245f6c/satelliteLib-34fea3c356e1d487f7d10ec820ed37ed3d41be4f.js" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script type="text/javascript" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      var arr = window.location.pathname.split('/');
+      var host = window.location.host;
+      var siteId = '';
+      
+      if(host.indexOf('informit') != -1) {
+        siteId = 'InformIT';
+      }
+      else if(host.indexOf('peachpit') != -1) {
+        siteId = 'Peachpit';
+      }
+      else if(host.indexOf('que') != -1) {
+        siteId = 'Que';
+      }
+      else if(host.indexOf('certification') != -1) {
+        siteId = 'PITC';
+      }
+      
+      var digitalData = {
+                          version: "1.0",
+                          site: {
+                                  siteId: siteId,
+                                  siteLabel: "InformIT",
+                                  domain: location.host,
+                                  siteSection: arr[1]
+                                },
+                        page:{
+                              pageInfo:{
+                                        pageName: ':' + arr[1],
+                                        pageTitle:document.title,
+                                        pageURL:window.location.pathname + window.location.search + window.location.hash
+                                      }
+                             }
+                        };
+      
+      if(arr[1].indexOf('.asp') != -1 || arr[1].indexOf('.aspx') != -1) {
+      var splitPageData = arr[1].split('.');
+      digitalData["site"]["siteSection"]='';
+      digitalData["page"]["pageInfo"]["pageName"]=':' + splitPageData[0];
+      }
+                        
+      if(CheckFormPage() == true) {
+        digitalData["page"] = {
+                            pageInfo:{
+                                      formName:" ",
+                                      pageURL:window.location.pathname + window.location.search + window.location.hash,
+                                      
+                                      siteSection: arr[1] 
+                                    }
+                            };
+      }
+    </script><script language="JavaScript" src="/display/common/javascript/modernizr.custom.js?v=20141110" type="text/javascript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script language="JavaScript" src="/display/common/javascript/jquery.js?v=20141110" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script language="JavaScript" src="/display/common/javascript/global.js?v=20141110" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><!--[if lte IE 8]><script language="JavaScript" src="/display/common/javascript/respond.min.js" type="text/JavaScript"></script><![endif]--><script language="JavaScript" src="/display/common/javascript/swfobject.js" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script language="JavaScript" src="/display/common/javascript/jquery-ui-1.10.2.custom.min.js" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script language="JavaScript" src="/display/common/javascript/fastclick.min.js" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><link rel="canonical" href="http://www.informit.com/articles/article.aspx?p=1833567" />
+            
+            <link rel="next" href="http://www.informit.com/articles/article.aspx?p=1833567&seqNum=2" />
+        
+                <meta name="pageType" content="Articles and Sample Chapters" />
+            <meta name="publishedDate" content="Feb 16, 2012" />
+                <meta name="description" content="Is your style of delivery high-risk, &#39;big bang&#39; deployment? Unless you&#39;re an adrenaline junkie, you&#39;re just risking spectacular failure with your company&#39;s money and your sanity. Jez Humble, coauthor of &lt;a href=&quot;http://www.informit.com/store/product.aspx?isbn=0321601912&quot;&gt;Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation&lt;/a&gt;, provides detailed examples of how four simple principles can reduce your risk from high to low and increase your chances of success from low to high." />
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+            
+        <link rel="shortcut icon" href="/display/InformIT/images/objects/favicon.ico?v=20141110" /><script xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+          (function(d){
+            var e=d.createElement('script');
+            e.src='https://td.yieldify.com/yieldify/code.js?w_uuid=319c38ba-d8c1-4c13-ad45-545e025f89d3&k=1&loca='+window.location.href;
+            e.async=true;
+            d.getElementsByTagName('head')[0].appendChild(e);
+          }(document));
+      </script><script xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      (function() {
+          var _fbq = window._fbq || (window._fbq = []);
+          if (!_fbq.loaded) {
+              var fbds = document.createElement('script');
+              fbds.async = true;
+              fbds.src = '//connect.facebook.net/en_US/fbds.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(fbds, s);
+              _fbq.loaded = true;
+          }
+          _fbq.push(['addPixelId', '730048657068506']);
+      })();
+      
+      window._fbq = window._fbq || [];
+      window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script><noscript xmlns:msxsl="urn:schemas-microsoft-com:xslt"><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=730048657068506&amp;ev=PixelInitialized" /></noscript></head><body class="r"><div class="wrapper">
+
+<div id="rContent" class="articleProduct content clearfix">
+<p class="crumb">
+            <a href="/">Home</a>
+            &gt;
+            <a href="/articles/index.aspx">Articles</a>
+            &gt;
+            <a href="/articles/index.aspx?st=60206">Programming</a>
+</p>
+    <div id="columnOne" class="ten columns alpha rFull">
+        <div id="articleContent" class="clearfix">
+            <div id="articleHeader" class="clearfix">
+                    <h1>Four Principles of Low-Risk Software Releases</h1>
+                <a rel="author" href="/authors/bio/e0306367-da75-4f0f-86a0-14327a2ae568"><img src="https://ptgmedia.pearsoncmg.com/authors/h/humble_jez/humble_jez_e.jpg" alt="Jez Humble" class="author" /></a>                <ul class="list-article-author">
+                        <li class="authorName"> By <a rel="author" href="/authors/bio/e0306367-da75-4f0f-86a0-14327a2ae568">Jez Humble</a></li>
+                    <li>Feb 16, 2012</li>
+                </ul>
+            </div>
+            <div class="articleTools clearfix box">
+                    <div id="articleTOC">
+                        <p>
+                            <a href="#" class="TOC"><span class="ss-icon">&#x1F4C4;</span> <span class="linkText">Contents</span></a>
+                        </p>
+                        <div id="articleTOCList" class="TOCcontent">
+                            <a class="tocClose ss-icon" href="#">&#x2421;</a>                        
+                            <ol>
+                                            <li class="currentPageInfo">
+                                                Principle 1: Low-Risk Releases Are Incremental
+                                            </li>
+                                            <li>
+                                                <a href="/articles/article.aspx?p=1833567&amp;seqNum=2">Principle 2: Decouple Deployment and Release</a>
+                                            </li>
+                                            <li>
+                                                <a href="/articles/article.aspx?p=1833567&amp;seqNum=3">Principle 3: Focus on Reducing Batch Size</a>
+                                            </li>
+                                            <li>
+                                                <a href="/articles/article.aspx?p=1833567&amp;seqNum=4">Principle 4: Optimize for Resilience</a>
+                                            </li>
+                                            <li>
+                                                <a href="/articles/article.aspx?p=1833567&amp;seqNum=5">Conclusions</a>
+                                            </li>
+                            </ol>                            
+                        </div>
+                    </div>
+                <div class="articleInteraction">
+                    <ul>
+                        <li>
+                            <a href="/articles/printerfriendly/1833567" title="Print"><span class="ss-icon">&#x2399;</span> <span class="linkText">Print</span></a>
+                        </li>
+                        <li>
+
+<script type="text/javascript">
+    addthis_pub = 'informit';
+    addthis_logo = 'http://www.informit.com/display/InformIT/images/header/informit.png';
+    addthis_logo_background = '596770';
+    addthis_logo_color = '596770';
+    addthis_brand = 'informIT';
+    addthis_options = 'email, delicious, digg, facebook, google, newsvine, reddit, slashdot, stumbleupon, technorati, twitter, more';
+</script>
+<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><span class="ss-icon">&#x002B;</span> <span class="linkText">Share This</span></a>
+<script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+                        </li>
+                    </ul>
+                </div>
+                    <div class="pagination">
+        <span class="paginationLocation"><span class="pagination-bold">Page 1</span><span class="pagination-nodisplay"> of 5</span></span>
+            <a class="paginationNext" href="/articles/article.aspx?p=1833567&amp;seqNum=2"><span class="pagination-nodisplay">Next </span>&gt;</a>
+    </div>
+                
+            </div> <!-- end articletools -->
+            <div id="articleText">
+                    <div id="articleLongDescription">Is your style of delivery high-risk, 'big bang' deployment? Unless you're an adrenaline junkie, you're just risking spectacular failure with your company's money and your sanity. Jez Humble, coauthor of <a href="http://www.informit.com/store/product.aspx?isbn=0321601912">Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</a>, provides detailed examples of how four simple principles can reduce your risk from high to low and increase your chances of success from low to high.</div>
+                    <div id="articleDescription"></div>
+
+                    <a class="relatedBookLink" href="#">From the author of <span class="ss-icon">&#xF500;</span></a>
+                    <div class="relatedBook relatedBookWide">
+                        <div class="header">
+                            <h3>From the author of</h3>
+                        </div>
+                        <div class="productArea clearfix">
+                            <a href="/store/continuous-delivery-reliable-software-releases-through-9780321601919?w_ptgrevartcl=Four+Principles+of+Low-Risk+Software+Releases_1833567"><img src="/ShowCover.aspx?isbn=9780321601919&amp;type=d" alt="Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation" class="product" /></a><a href="/store/continuous-delivery-reliable-software-releases-through-9780321601919?w_ptgrevartcl=Four+Principles+of+Low-Risk+Software+Releases_1833567" class="title">Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</a>
+                            <br />
+                            <br />
+                            <a href="/store/continuous-delivery-reliable-software-releases-through-9780321601919?w_ptgrevartcl=Four+Principles+of+Low-Risk+Software+Releases_1833567" class="button">Learn More</a>
+                                <a href="/buy.aspx?isbn=9780321601919&w_ptgrevartcl=Four+Principles+of+Low-Risk+Software+Releases_1833567" class="buy button"><span class="ss-icon">&#xE500;</span>Buy</a>
+                        </div>
+                    </div>
+                    <div class="relatedBook slide">
+                        <div class="header graydient">
+                            <h3 class="relatedHide">From the author of</h3>
+                            <h3 class="relatedShow"><a href="#" class="mobileClose">From the author of <span class="ss-icon">&#xF501;</span></a></h3>
+                        </div>
+                        <div class="productArea graydient clearfix">
+                            <a href="/store/continuous-delivery-reliable-software-releases-through-9780321601919?w_ptgrevartcl=Four+Principles+of+Low-Risk+Software+Releases_1833567"><img src="/ShowCover.aspx?isbn=9780321601919&amp;type=d" alt="Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation" class="product" /></a><a href="/store/continuous-delivery-reliable-software-releases-through-9780321601919?w_ptgrevartcl=Four+Principles+of+Low-Risk+Software+Releases_1833567" class="title">Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</a>
+                            <br />
+                            <br />
+                            <a href="/store/continuous-delivery-reliable-software-releases-through-9780321601919?w_ptgrevartcl=Four+Principles+of+Low-Risk+Software+Releases_1833567" class="button">Learn More</a>
+                                <a href="/buy.aspx?isbn=9780321601919&w_ptgrevartcl=Four+Principles+of+Low-Risk+Software+Releases_1833567" class="buy button"><span class="ss-icon">&#xE500;</span>Buy</a>
+                        </div>
+                    </div>
+
+                <p>One key goal of continuous deployment is to reduce the risk of releasing software. Counter-intuitively, increased throughput and increased production stability are not a zero-sum game, and effective continuous deployment actually <em>reduces</em> the risk of any individual release. In the course of teaching continuous delivery and talking to people who implement it, I've come to see that "doing it right" can be reduced to four principles:</p><ul>	<li>Low-risk releases are incremental.</li>	<li>Decouple deployment and release.</li>	<li>Focus on reducing batch size.</li>	<li>Optimize for resilience.</li></ul><div class="sidebar"><p class="title"><strong>NOTE</strong></p><p>In this article, I'm focusing on release practices. Developers and testers can do many other things to reduce release risk, such as continuous integration and automating tests, but I won't deal with those topics here. I've also limited the scope of the discussion to hosted services such as websites and "Software as a Service" systems, although the principles can certainly be applied more widely.</p></div><h2>Principle 1: Low-Risk Releases Are Incremental</h2><p>Any organization of reasonable maturity will have production systems composed of several interlinked components or services, with dependencies between those components. For example, my application might depend on some static content, a database, and some services provided by other systems. Upgrading all of those components in one big-bang release is the highest-risk way to roll out new functionality.</p><p>Instead, deploy components independently, in a side-by-side configuration wherever possible, as shown in <a href="/content/images/art_humble2_lowriskware/elementLinks/humble2_fig01.jpg">Figure1</a>. For example, if you need to roll out new static content, don't overwrite the old content. Instead, deploy that content in a new directory so it's accessible via a different URI&#151;before you deploy the new version of the application that requires it.</p><div class="figure">	<a href="javascript:popUp('/content/images/art_humble2_lowriskware/elementLinks/humble2_fig01.jpg')">	<img src="/content/images/art_humble2_lowriskware/elementLinks/thhumble2_fig01.jpg" width="400" height="359"></a>	<p><a href="javascript:popUp('/content/images/art_humble2_lowriskware/elementLinks/humble2_fig01.jpg')">Figure 1</a> Upgrading incrementally.</p></div><p>Database changes can also be rolled out incrementally. Even organizations like Flickr, which deploy multiple times a day, don't roll out database changes that frequently. Instead, they use the <a href="http://exortech.com/blog/2009/02/01/weekly-release-blog-11-zero-downtime-database-deployment/">expand/contract</a> pattern. The rule is that you never change existing objects all at once. Instead, divide the changes into reversible steps:</p><ol>	<li>	Before the release goes out, add new objects to the database that will be required by that new release.</li>	<li>	Release the new version of the app, which writes to the new objects, but reads from the old objects if necessary so as to migrate data "lazily." If you need to roll back at this point, you can do so without having to roll back the database changes.</li>	<li>	Finally, once the new version of the app is stable and you're sure you won't need to roll back, apply the contract script to finish migrating any old data and remove any old objects.</li></ol><p>Similarly, if the new version of your application requires a new version of some service, you should have the new version of that service up, running, and tested <em>before</em> you deploy the new version of your app that depends on it. One way to do this is to write the new version of your service so that it can handle clients that expect the old version. (How easy this is depends a lot on your platform and design.) If this is impossible, you'll need to be able to run multiple versions of that service side by side. Either way, your service needs to be able to support older clients. For example, when accessing <a href="http://aws.amazon.com/developertools/351">Amazon's EC2 API</a> over HTTP, you must specify the API version number to use. When Amazon releases a new version of the API, the old versions carry on working.</p><p>Designing services to support clients that expect older versions comes with costs&#151;most seriously in maintenance and compatibility testing. But it means that the consumers of your service can upgrade at their convenience, while you can get on with developing new functionality. And of course if the consumers need to roll back to an older version of their app that requires an older version of your service, they can do that.</p><p>Of course, you must consider lots of edge cases when using these techniques, and they require careful planning and some extra development work, but ultimately they're just applications of the <a href="http://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/">branch-by-abstraction</a> pattern.</p><p>Finally, how do we release the new version of the application incrementally? This is the purpose of the <a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">blue-green deployment</a> pattern. Using this pattern, we deploy the new version of the application side by side with the old version. To cut over to the new version&#151;and roll back to the old version&#151;we change the load balancer or router setting (see <a href="/content/images/art_humble2_lowriskware/elementLinks/humble2_fig02.jpg">Figure2</a>).</p><div class="figure">	<a href="javascript:popUp('/content/images/art_humble2_lowriskware/elementLinks/humble2_fig02.jpg')">	<img src="/content/images/art_humble2_lowriskware/elementLinks/thhumble2_fig02.jpg" width="400" height="126"></a>	<p><a href="javascript:popUp('/content/images/art_humble2_lowriskware/elementLinks/humble2_fig02.jpg')">Figure 2</a> Blue-green deployment.</p></div><p>A variation on blue-green deployment, applicable when running a cluster of servers, is <em>canary releasing</em>. With this pattern, rather than upgrading a whole cluster to the latest version all at once, you do it incrementally. For example, as described in an excellent <a href="http://techcrunch.com/2011/05/30/facebook-source-code/">talk</a> by Facebook's release manager, Chuck Rossi, Facebook pushes new builds to production in three phases (see <a href="/content/images/art_humble2_lowriskware/elementLinks/humble2_fig03.jpg">Figure3</a>):</p><ol>	<li>	First the build goes to	  A1&#151;a small set of production	  boxes to which only employees	  are routed.</li>	<li>	If the A1 deployment looks	  good, the build goes to A2,	  a "couple of thousand" boxes	  to which only a small percentage	  of users are routed.</li>	<li>	A1 and A2 are like canaries	  in a coal mine&#151;if a problem	  is discovered at these stages,	  the build goes no further. Only	  when no problems occur is the	  build promoted to A</li><div class="figure">	<a href="javascript:popUp('/content/images/art_humble2_lowriskware/elementLinks/humble2_fig03.jpg')">	<img src="/content/images/art_humble2_lowriskware/elementLinks/thhumble2_fig03.jpg" width="400" height="228"></a>	<p><a href="javascript:popUp('/content/images/art_humble2_lowriskware/elementLinks/humble2_fig03.jpg')">Figure	    3</a> Facebook's three phases	    for pushing new builds to	    production.</p></div></ol><p>An interesting extension of this technique is the <a href="http://www.slideshare.net/bgdurrett/continuous-deployment-at-lean-la">cluster immune system</a>. Developed by the engineers at <a href="http://en.wikipedia.org/wiki/IMVU">IMVU</a>, this system monitors business metrics as a new version is being rolled out through a canary releasing system. It automatically rolls back the deployment if any parameters exceed tolerance limits, emailing everyone who checked in since the last deployment so that they can fix the problem.</p>
+            </div>
+            <div class="articleTools clearfix box">
+                    <div class="pagination">
+        <span class="paginationLocation"><span class="pagination-bold">Page 1</span><span class="pagination-nodisplay"> of 5</span></span>
+            <a class="paginationNext" href="/articles/article.aspx?p=1833567&amp;seqNum=2"><span class="pagination-nodisplay">Next </span>&gt;</a>
+    </div>
+
+                <div class="articleInteraction">
+                    <ul>
+                        <li>
+
+<script type="text/javascript">
+    addthis_pub = 'informit';
+    addthis_logo = 'http://www.informit.com/display/InformIT/images/header/informit.png';
+    addthis_logo_background = '596770';
+    addthis_logo_color = '596770';
+    addthis_brand = 'informIT';
+    addthis_options = 'email, delicious, digg, facebook, google, newsvine, reddit, slashdot, stumbleupon, technorati, twitter, more';
+</script>
+<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><span class="ss-icon">&#x002B;</span> <span class="linkText">Share This</span></a>
+<script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+                        </li>
+                        <li class="last">
+                            <a href="#addToWishList" class="jsLoadFrame dialogOpener"><span class="ss-icon">&#x1F516;</span> <span class="linkText">Save To Your Account</span></a>               
+                        </li>
+                    </ul>
+                     <div id="addToWishList" class="dialogBox" title="Save To My Account">
+                         <iframe id="wishListSrc" src="/my_account/addTo.aspx?p=434a145f-f6bd-4fa1-b975-53976ea1d768&e=e47243e1-bb28-4dc4-9ac6-bafd008a77ef&t=a&redirectUrl=http://www.informit.com/articles/article.aspx?p=1833567&initialLoad=1"></iframe>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div id="columnTwo" class="six columns omega rFull">
+<div id="promotions" class="tabwidget prop">
+	<h3>Related Resources</h3>
+	<ul class="tabs clearfix">
+		<li class="selected"><a href="#" onclick="tabWidget(1,'promotions'); return false;">Store</a></li>
+		<li><a href="#" onclick="tabWidget(2,'promotions'); loadWidget('promotions', 1, '/Related/Articles/1833567?stateIntId=60206'); return false;">Articles</a></li>
+		<li><a href="#" onclick="tabWidget(3,'promotions'); loadWidget('promotions', 2, '/Related/Blogs/1224361?stateIntId=60206'); return false;">Blogs</a></li>
+	</ul>
+	<div class="container on">
+
+    <div class="buckets-image-51 cf">
+        <div class="productCover">
+            <a href="/store/adaptive-code-agile-coding-with-design-patterns-and-9781509302581?w_ptgrevartcl=Adaptive+Code%3a+Agile+coding+with+design+patterns+and+SOLID+principles_2495271">
+                <img src="/ShowCover.aspx?isbn=1509302581&type=e" alt="Adaptive Code: Agile coding with design patterns and SOLID principles" class="product" />
+            </a>
+        </div>
+
+        <ul class="buckets-list left">
+            <li class="buckets-list-title">
+                <a href="/store/adaptive-code-agile-coding-with-design-patterns-and-9781509302581" class="title">
+                    Adaptive Code: Agile coding with design patterns and SOLID principles, 2nd Edition
+                </a>
+            </li>
+            <li class="buckets-image-51-author">By <a href="/authors/bio/aded0065-9e33-41af-8ad1-a4d22b75f67e">Gary McLean Hall</a></li>
+            <li class="buckets-image-51-price">Book $39.99</li>
+        </ul>
+    </div><!--buckets-image-51 -->
+    <div class="buckets-image-51 cf">
+        <div class="productCover">
+            <a href="/store/safe-4.0-distilled-applying-the-scaled-agile-framework-9780134209425?w_ptgrevartcl=SAFe+4.0+Distilled%3a+Applying+the+Scaled+Agile+Framework+for+Lean+Software+and+Systems+Engineering_2323588">
+                <img src="/ShowCover.aspx?isbn=0134209427&type=e" alt="SAFe 4.0 Distilled: Applying the Scaled Agile Framework for Lean Software and Systems Engineering" class="product" />
+            </a>
+        </div>
+
+        <ul class="buckets-list left">
+            <li class="buckets-list-title">
+                <a href="/store/safe-4.0-distilled-applying-the-scaled-agile-framework-9780134209425" class="title">
+                    SAFe 4.0 Distilled: Applying the Scaled Agile Framework for Lean Software and Systems Engineering
+                </a>
+            </li>
+            <li class="buckets-image-51-author">By <a href="/authors/bio/762e5c0c-c42b-432d-a21c-86c165db81bb">Richard Knaster</a>, <a href="/authors/bio/8af57023-5a3e-4f27-af2e-27cdf014448c">Dean Leffingwell</a></li>
+            <li class="buckets-image-51-price">Book $35.99</li>
+        </ul>
+    </div><!--buckets-image-51 -->
+    <div class="buckets-image-51 cf">
+        <div class="productCover">
+            <a href="/store/practical-guide-to-continuous-delivery-9780134691473?w_ptgrevartcl=Practical+Guide+to+Continuous+Delivery%2c+A_2739101">
+                <img src="/ShowCover.aspx?isbn=0134691474&type=e" alt="Practical Guide to Continuous Delivery, A" class="product" />
+            </a>
+        </div>
+
+        <ul class="buckets-list left">
+            <li class="buckets-list-title">
+                <a href="/store/practical-guide-to-continuous-delivery-9780134691473" class="title">
+                    Practical Guide to Continuous Delivery, A
+                </a>
+            </li>
+            <li class="buckets-image-51-author">By <a href="/authors/bio/318f7dc3-5ed2-4e7f-bdb6-e38da7b7d91f">Eberhard Wolff</a></li>
+            <li class="buckets-image-51-price">Book $34.39</li>
+        </ul>
+    </div><!--buckets-image-51 -->
+    <p class="buckets-see-all">
+        <a href="/store/index.aspx?st=60206">See All Related Store Items</a>
+    </p>
+
+	</div>
+	<div class="container"></div>
+	<div class="container"></div>
+	<div class="container"></div>
+</div>
+        
+        
+    </div>
+
+    <script type="text/javascript" src="/display/common/javascript/waypoints.min.js"></script>
+    <script type="text/javascript" src="/display/common/javascript/jquery.fitvids.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {    
+            $('#articleText').fitVids();
+            if (document.documentElement.clientWidth > 960) {
+                $('#rContent').waypoint(function() {
+                    $('.relatedBook.slide').slideToggle();
+                    $('.relatedBookLink').slideToggle();
+                }, { offset: -300 }); 
+            } else {
+                console.log('narrow');
+                $('#rContent').waypoint(function() {
+                    $('.relatedBook.slide').slideToggle();
+                    $('.relatedBookLink').slideToggle();
+                }, { offset: -10 }); 
+
+                $('#articleContent').waypoint(function() {
+                    $('.relatedBook.slide').slideToggle();
+                    $('.relatedBookLink').slideToggle();
+                }, { offset: 'bottom-in-view' }); 
+            }
+                          
+            $('.relatedBookLink').on('click touchstart', function() {
+                $('.relatedBookLink').toggleClass('active');
+                $('.relatedBook.slide').toggleClass('active');
+                return false;              
+            });
+            $('.mobileClose').on('click touchstart', function() {
+                $('.relatedBookLink').toggleClass('active');
+                $('.relatedBook.slide').toggleClass('active');
+                return false;              
+            }); 
+            if (!$('.sidebar').children().is('.title, .theholder')) {
+                $('.sidebar').css('padding', '2em 1em 1em 1em');
+            }              
+        });
+    </script>
+</div><div id="header"><div class="cranium"><div class="branding"><div id="hLogo"><a href="/" accesskey="0" title="Home" class="logo"><!--[if lte IE 8]><img src="/display/informIT/images/header/informit.png" alt="InformIT" /><![endif]--></a></div></div><div class="tagline">the trusted technology learning source</div><a href="#menu" class="menu-link ss-icon"></a><div id="headerLinks" class="clearfix">
+                   
+    <div id="cartLink" class="headerLink c">
+        <span class="bighead ss-icon">&#xE500;</span>
+        <a href="https://memberservices.informit.com/cart/buy.aspx?partner=53">
+            <span class="bighead">View </span>Your Cart
+        </a>
+    </div>
+
+    <div class="hi">
+            <a href="https://memberservices.informit.com/my_account/register.aspx?partner=53">Join</a><span>|</span><a href="https://memberservices.informit.com/my_account/login.aspx?partner=53">Sign In</a>
+    </div>
+
+              <form name="headersearchform" id="headersearchform" class="s" method="GET" action="/search/index.aspx" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><label for="headersearchform">Search</label><input onfocus="checkClear(this,'Search');" type="text" name="query" id="query" value="Search" /><input type="submit" id="searchbutton" class="ss-icon" value="🔎" /></form></div></div></div><div id="siteNav"><div class="cranium clearfix"><ul id="nav"><li class="mobile search"><form name="headersearchform" id="headersearchform" class="s" method="GET" action="/search/index.aspx" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><label for="headersearchform">Search</label><input onfocus="checkClear(this,'Search');" type="text" name="query" id="query" value="Search" /><input type="submit" id="searchbutton" class="ss-icon" value="🔎" /></form></li>
+                
+    <li class="mobile">
+        <a href="https://memberservices.informit.com/cart/buy.aspx?partner=53">
+            <span class="ss-icon cart">&#xE500; </span> View Your Cart
+        </a>
+    </li>
+
+    <li class="mobile">
+        <a href="https://memberservices.informit.com/my_account/login.aspx?partner=53">
+            <span class="ss-icon">&#x1F464;</span> Sign In
+        </a>
+    </li>
+    <li class="mobile">
+        <a href="https://memberservices.informit.com/my_account/register.aspx?partner=53">Join</a>
+    </li>
+
+              <li><a class="arrow" href="/store/">Store</a><ul class="column1 sib"><li><a href="/store/index.aspx?st=66374">
+                        Business &amp; Management
+                      </a></li><li><a href="/store/index.aspx?st=60403">Certification</a></li><li><a href="/store/index.aspx?st=98435">
+                        Cloud Computing &amp; Virtualization
+                      </a></li><li><a href="/store/index.aspx?st=60406">Data</a></li><li><a href="/store/index.aspx?st=99185">Digital Photography</a></li><li><a href="/store/index.aspx?st=60390">Engineering</a></li><li><a href="/store/index.aspx?st=60380">
+                        Graphics &amp; Web Design
+                      </a></li><li><a href="/store/index.aspx?st=60356">
+                        Home &amp; Office Computing
+                      </a></li><li><a href="/store/index.aspx?st=60367">Information Technology</a></li></ul><ul class="column2 sib"><li><a href="/store/index.aspx?st=98412">
+                        Mobile Application Development &amp; Programming
+                      </a></li><li><a href="/store/index.aspx?st=60382">Networking</a></li><li><a href="/store/index.aspx?st=67290">Open Source</a></li><li><a href="/store/index.aspx?st=60428">Operating Systems, Server</a></li><li><a href="/store/index.aspx?st=60370">Programming</a></li><li><a href="/store/index.aspx?st=60408">Security</a></li><li><a href="/store/index.aspx?st=66379">
+                        Software Development &amp; Management
+                      </a></li><li><a href="/store/index.aspx?st=66380">Web Development</a></li><li><a href="/store/index.aspx?st=60379">Web Services</a></li></ul></li><li><a class="arrow" href="/formats/">Formats</a><ul><li><a href="/store/browse/books">Books</a></li><li><a href="/store/browse/ebooks">eBooks</a></li><li><a href="/store/browse/practice-tests">Practice Tests</a></li><li><a href="/store/browse/software">Software</a></li><li><a href="/store/browse/video">Video</a></li><li><a href="/store/browse/web-editions">Web Editions</a></li></ul></li><li><a href="/promotions/">Deals &amp; Promotions</a></li><li><a href="/promotions/video-training-for-it-pros-developers-sys-admins-devops-140499">Video Training</a></li><li><a href="https://www.safaribooksonline.com/?utm_source=informit&amp;utm_medium=referral&amp;utm_campaign=publisher&amp;utm_content=global+top+nav">Safari</a></li><li><a class="arrow" href="/imprint/">Imprints</a><ul class="imprints"><li><a href="/imprint/index.aspx?st=61085">Addison-Wesley Professional</a></li><li><a href="http://www.adobepress.com">Adobe Press</a></li><li><a href="http://www.ciscopress.com">Cisco Press</a></li><li><a href="http://www.informit.com/promotions/pearson-ft-press-141135">FT Press</a></li><li><a href="http://www.informit.com/promotions/ibm-press-141142">IBM Press</a></li><li><a href="https://www.microsoftpressstore.com">Microsoft Press Store</a></li><li><a href="http://www.peachpit.com">Peachpit</a></li><li><a href="http://www.pearsonitcertification.com">Pearson IT Certification</a></li><li><a href="/imprint/index.aspx?st=61089">Prentice Hall Professional</a></li><li><a href="http://www.quepublishing.com">Que Publishing</a></li><li><a href="/imprint/index.aspx?st=61091">Sams Publishing</a></li><li><a href="http://www.pearsonitcertification.com/promotions/vmware-press-138356">VMware Press</a></li></ul></li><li><a class="arrow" href="/explore/">Explore</a><ul class="last"><li><a href="/about/">About</a></li><li><a href="/affiliates/">Affiliate Program</a></li><li><a href="/authors/">Authors</a></li><li><a href="/articles/">Chapters &amp; Articles</a></li><li><a href="/about/contact_us/">Contact Us</a></li><li><a href="/promotions/">Deals &amp; Promotions</a></li><li><a href="/promotions/resource-center-directory-140876">Popular Topics</a></li><li><a href="/store/register.aspx">Product Registration</a></li><li><a href="/newsletters/">Special Offers &amp; Newsletter</a></li><li><a href="/promotions/video-training-for-it-pros-developers-sys-admins-devops-140499">Video Training</a></li></ul></li><li><a class="arrow" href="/promotions/informits-community-resource-center-139745">Community</a><ul class="last"><li><a href="/press/">Press and Media Relations</a></li><li><a href="/promotions/share-your-knowledge-and-become-a-community-reviewer-140471">Product Review Team</a></li><li><a href="/user_groups/">User Groups</a></li></ul></li></ul></div></div><div id="footer"><ul class="links"><li><a href="/about/">About</a></li><li><a href="/affiliates/">Affiliates</a></li><li><a href="/about/contact_us/">Contact Us</a></li><li><a href="/about/jobs.aspx">Jobs</a></li><li><a href="/about/legal.aspx">Legal Notice</a></li><li><a href="/about/privacy.aspx">Privacy Policy</a></li><li><a href="/press/">Press</a></li><li><a href="/promotions/">Promotions</a></li><li><a href="/site_map/">Site Map</a></li><li><a href="/about/write_for_us.aspx">Write for Us</a></li></ul><div itemscope="itemscope" itemtype="http://schema.org/Corporation">
+          ©  2017 Pearson Education, <span itemprop="name">Informit</span>. All rights reserved.<br /><div itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">800 East 96th Street</span>, <span itemprop="addressLocality">Indianapolis</span>, <span itemprop="addressRegion">Indiana </span><span itemprop="postalCode">46240</span></div></div></div><div id="strap"><div class="cranium"><div id="pearsonTopLogoLink"></div><div id="pearsonAlwaysLearningImage"></div></div></div><!--Google analytics--><script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+        { (i[r].q=i[r].q||[]).push(arguments)}
+        ,i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-433761-6', 'auto', {'allowLinker': true});
+        ga('require', 'linker');
+        
+        ga('linker:autoLink', ['www.informit.com', 'memberservices.informit.com']);
+        ga('send', 'pageview');
+      </script><script type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+            setTimeout(function(){var a=document.createElement("script");
+            var b=document.getElementsByTagName("script")[0];
+            a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/4148.js?"+Math.floor(new Date().getTime()/3600000);
+            a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+        </script></div><script type="text/javascript" xmlns:msxsl="urn:schemas-microsoft-com:xslt">_satellite.pageBottom();</script></body></html>
